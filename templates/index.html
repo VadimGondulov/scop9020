@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Form</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <h2>Enter names!</h2>
+  <form id="name-form" action="/submit" method="POST">
+    <div id="input-container">
+      <input type="text" name="name" placeholder="Enter name here">
+    </div>
+    <button type="button" id ="add-btn">Add more</button>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

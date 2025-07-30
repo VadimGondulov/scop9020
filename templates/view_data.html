@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Data</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saved Data</h1>
+
+    {% if pairs %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Field name</th>
+                    <th>Input value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in pairs %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No data</p>
+    {% endif %}
+</body>
+</html>
